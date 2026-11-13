@@ -1,0 +1,5 @@
+# 2026-11-13-01-47-11
+.venv/
+__pycache__/
+# The HTML page the PDF is printed from
+build/

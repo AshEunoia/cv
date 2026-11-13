@@ -1,0 +1,123 @@
+/* 2026-11-13-01-47-11 */
+/* The CV's print styles: A4, one column, text only, in kyberfex.com's typeface and colours. The
+   sizes follow the brief: 11pt body text, 14pt section headings, margins of about 2.5 cm. */
+
+/* build.py loads the typeface, as fixed instances of fonts/bricolage-grotesque-latin.woff2 */
+
+@page {
+  size: A4;
+  margin: 2.2cm 2.5cm;
+}
+
+:root {
+  --ink: #0a0d12;
+  --soft: #3d4754;
+  --teal-ink: #0f5f52;
+  --rule: #b9cbc6;
+}
+
+html {
+  color: var(--ink);
+  font-family: "Bricolage Grotesque", Calibri, Arial, sans-serif;
+  font-size: 11pt;
+  line-height: 1.3;
+  /* Ligatures and hyphens can garble the text that screening software reads out of a PDF */
+  font-variant-ligatures: no-common-ligatures;
+  hyphens: manual;
+}
+
+body {
+  margin: 0;
+}
+
+/* The name, the headline and the contact line */
+h1 {
+  margin: 0 0 3pt;
+  font-size: 26pt;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+
+h1 + p {
+  margin: 0 0 5pt;
+  color: var(--teal-ink);
+  font-size: 12pt;
+  font-weight: 600;
+}
+
+h1 + p + p {
+  margin: 0;
+  color: var(--soft);
+  font-size: 10pt;
+}
+
+h2 {
+  margin: 12pt 0 5pt;
+  padding-bottom: 2pt;
+  border-bottom: 0.75pt solid var(--rule);
+  color: var(--teal-ink);
+  font-size: 14pt;
+  font-weight: 700;
+  break-after: avoid;
+}
+
+/* A job, a project or a qualification: its title in bold, then where and when. build.py wraps
+   each one in .entry, which keeps it on one page. */
+.entry {
+  break-inside: avoid;
+}
+
+h3 {
+  margin: 7pt 0 0;
+  font-size: 11.5pt;
+  font-weight: 700;
+  break-after: avoid;
+}
+
+h2 + h3 {
+  margin-top: 0;
+}
+
+h3 + p {
+  margin: 1pt 0 3pt;
+  color: var(--soft);
+  font-size: 10pt;
+}
+
+p {
+  margin: 0 0 4pt;
+}
+
+ul {
+  margin: 2pt 0 0;
+  padding-left: 1.1em;
+}
+
+li {
+  margin: 0 0 2.5pt;
+  padding-left: 0.2em;
+}
+
+li::marker {
+  color: var(--teal-ink);
+}
+
+p,
+li {
+  break-inside: avoid;
+  orphans: 2;
+  widows: 2;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--rule);
+  text-decoration-thickness: 0.75pt;
+  text-underline-offset: 2pt;
+}
+
+strong {
+  font-weight: 700;
+}
