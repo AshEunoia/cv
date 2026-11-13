@@ -3,8 +3,11 @@
 check the PDF. It must fit on two pages, use the CV's own typeface, and hold the same text as the
 Markdown in the same order, which is how screening software will read it.
 
-    uv run build.py            build Ash-Eunoia-CV.pdf and check it
-    uv run build.py --links    also check that every link in the CV answers
+    uv run build.py                     build Ash-Eunoia-CV.pdf and check it
+    uv run build.py --links             also check that every link in the CV answers
+    uv run build.py tailored.md         build a copy tailored to one application, as tailored.pdf
+    uv run build.py tailored.md --out Ash-Eunoia-CV.pdf
+                                        the same, with the PDF's name and place chosen
 """
 
 import argparse
@@ -51,9 +54,9 @@ def static_fonts():
     return "\n".join(rules)
 
 
-def render():
-    """Write the HTML page and return it."""
-    markdown = SOURCE.read_text(encoding="utf-8")
+def render(source):
+    """Write the HTML page for the CV's Markdown, and return it."""
+    markdown = source.read_text(encoding="utf-8")
     name = re.search(r"^# (.+)$", markdown, re.MULTILINE).group(1)
     body = MarkdownIt("commonmark").render(markdown)
     # Wrap each entry, from its heading to the next heading, so the stylesheet can keep it on one page
@@ -93,7 +96,7 @@ def tokens(text):
     return re.findall(r"\w+", unicodedata.normalize("NFKC", text))
 
 
-def print_pdf():
+def print_pdf(output):
     """Print the page to PDF and return the text the browser laid out."""
     with sync_playwright() as playwright:
         browser = launch(playwright)
@@ -102,16 +105,16 @@ def print_pdf():
         page.evaluate("document.fonts.ready")
         if not page.evaluate(f"document.fonts.check('11pt \"{FONT}\"')"):
             sys.exit(f"{FONT} didn't load, so the PDF would use a fallback font")
-        page.pdf(path=OUTPUT, prefer_css_page_size=True, print_background=True, tagged=True, outline=True)
+        page.pdf(path=output, prefer_css_page_size=True, print_background=True, tagged=True, outline=True)
         text = page.evaluate("document.body.innerText")
         browser.close()
     return text
 
 
-def check_pdf(laid_out):
+def check_pdf(output, laid_out):
     """Problems with the PDF: too many pages, or text missing or out of order."""
     problems = []
-    reader = PdfReader(OUTPUT)
+    reader = PdfReader(output)
     pages = len(reader.pages)
     if pages > MAX_PAGES:
         problems.append(f"{pages} pages, more than {MAX_PAGES}")
@@ -150,14 +153,18 @@ def check_links(page):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    parser.add_argument("source", nargs="?", type=Path, default=SOURCE, help="the CV's Markdown (default: cv.md)")
+    parser.add_argument("--out", type=Path, help="where to write the PDF (default: beside a tailored copy)")
     parser.add_argument("--links", action="store_true", help="also check that every link answers")
     arguments = parser.parse_args()
+    source = arguments.source.resolve()
+    output = arguments.out or (OUTPUT if source == SOURCE else source.with_suffix(".pdf"))
 
-    page = render()
-    pages, words, problems = check_pdf(print_pdf())
+    page = render(source)
+    pages, words, problems = check_pdf(output, print_pdf(output))
     if arguments.links:
         problems += check_links(page)
-    print(f"{OUTPUT.name}: {pages} page{'s' if pages != 1 else ''}, {words} words")
+    print(f"{output}: {pages} page{'s' if pages != 1 else ''}, {words} words")
     if problems:
         sys.exit("Problems:\n" + "\n".join(f"- {problem}" for problem in problems))
 

@@ -11,8 +11,9 @@ I'm a software developer in Cockermouth, Cumbria. My website and portfolio are a
 The CV is written in Markdown, in [cv.md](cv.md). [build.py](build.py) turns it into an A4 PDF, styled by [cv.css](cv.css), and checks the result:
 
 ```sh
-uv run build.py           # build Ash-Eunoia-CV.pdf and check it
-uv run build.py --links   # also check that every link answers
+uv run build.py                 # build Ash-Eunoia-CV.pdf and check it
+uv run build.py --links         # also check that every link answers
+uv run build.py tailored.md     # build a copy tailored to one application, as tailored.pdf
 ```
 
 The build fails if the PDF runs past two pages, or if its text doesn't match the Markdown's word for word and in the same order, which is how screening software reads a CV. The PDF is tagged for screen readers and has bookmarks for each section.

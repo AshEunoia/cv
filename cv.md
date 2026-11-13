@@ -15,8 +15,8 @@ I build websites that their owners can run without a developer, and tools that s
 
 Cockermouth and remote · Apr 2026 – present
 
-- Designed and built a website for Meridiana Creative, a digital marketing consultancy in Valencia, Spain, in Wagtail: its brand and logo, more than 20 sections the owner arranges without a developer, structured data for search engines, cookie consent, and accessibility checks on every page.
-- Rebuilt my business website, [kyberfex.com](https://kyberfex.com/), in Wagtail, Django and Python, with more than 170 automated tests checking every change for accessibility (WCAG 2.2 AA), keyboard use and security.
+- Designed and built the website of Meridiana Creative, a digital marketing consultancy in Valencia, Spain: its brand and logo, and a Wagtail site with more than 20 sections the owner arranges without a developer, structured data for search engines, cookie consent and accessibility checks on every page.
+- Rebuilt my business website, [kyberfex.com](https://kyberfex.com/), in Wagtail, Django and Python, with more than 170 automated tests checking every change for keyboard use, security and accessibility to the Web Content Accessibility Guidelines (WCAG 2.2 AA).
 - Help local people and businesses with their computers, from setting up email to administering business systems, in person and remotely (since 2022).
 
 ### Tech intern and only in-house developer, Jennings Brewery (part-time)
@@ -60,7 +60,7 @@ Maps the world's elevation and shorelines onto Buckminster Fuller's Dymaxion map
 ## Skills
 
 - **Languages:** Python, TypeScript, JavaScript, HTML, CSS, SQL; earlier, PHP, Perl, VBA.
-- **Frameworks:** Django, Wagtail, Astro, Sanity, Square's APIs, and Blender's Python API.
+- **Frameworks and CMSs:** Django, Wagtail, Astro and Sanity.
 - **Databases:** PostgreSQL, SQLite and MySQL.
 - **How I work:** Claude Code; pytest and Playwright; Git, GitHub, pull requests and continuous integration; WCAG 2.2 AA; plain-English guides.
 
@@ -72,7 +72,7 @@ Whitehaven and online · Sep 2025 – Dec 2025 · certificate of achievement
 
 An 11-week course for tech roles in nuclear, energy and engineering: Python, SQL, data science, machine learning, cyber security, networking, PLCs and microcontrollers.
 
-### HNC in Multimedia and Website Development
+### Higher National Certificate (HNC) in Multimedia and Website Development
 
 University of Bolton · 2010 – 2012
 
