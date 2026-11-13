@@ -110,17 +110,17 @@ The UK sources (Prospects and the National Careers Service) set the conventions.
 | 13 November 2026 | Meridiana Creative's website goes under Kyberfex, with the client's permission, and on kyberfex.com's portfolio too. |
 | 13 November 2026 | Ash approved the first Markdown version: CODE Cumbria's dates, the career break, the profile's account of working with Claude Code, and "Software developer" for the Kyberfex entry. |
 | 13 November 2026 | A review against this brief: abbreviations spelled out once (HNC, WCAG), the Meridiana Creative bullet reworded, the skills' labels made accurate ("Frameworks and CMSs"), and the build taught to make tailored copies. References got a heading of their own. |
+| 13 November 2026 | Ash updated the GitHub profile to match the CV: "Software developer · Python, Django and TypeScript · websites their owners can run without a developer", Cockermouth, Cumbria, and kyberfex.com. |
 
 ## Open questions for Ash
 
 1. **Meridiana Creative's link:** add meridianacreative.com to its entry once the site is live.
 2. **kyberfex.com still shows the WordPress site** until the new one launches, so a reader following the CV's link can't yet see the Wagtail rebuild it describes (principles 10 and 13). Launch soon, or until then point the link at the new site's own address?
-3. **The GitHub profile** still says "Programmer, database administrator, network administrator" and "Cockermouth, England", with no website (principle 16). Change it to match the CV, add kyberfex.com, and pin the public projects?
-4. **The library job's results:** the move to Excel and VBA says what was done but not what it achieved (principle 6). Is there a measure, such as time saved or errors avoided?
-5. **2012 to 2016:** the years between the HNC and the library job are shown as a gap with no entry. Is there anything worth a line?
-6. **Extras:** a driving or motorcycle licence, first aid, or other certificates worth a line?
-7. **LinkedIn:** update it to match the CV, as the employment coach suggested?
-8. **The SVN folder** `trunk/resume` still has "resume" in its name. Rename it, for example to `cv-word`, or leave the archive as it is?
+3. **The library job's results:** the move to Excel and VBA says what was done but not what it achieved (principle 6). Is there a measure, such as time saved or errors avoided?
+4. **2012 to 2016:** the years between the HNC and the library job are shown as a gap with no entry. Is there anything worth a line?
+5. **Extras:** a driving or motorcycle licence, first aid, or other certificates worth a line?
+6. **LinkedIn:** update it to match the CV, as the employment coach suggested?
+7. **The SVN folder** `trunk/resume` still has "resume" in its name. Rename it, for example to `cv-word`, or leave the archive as it is?
 
 ## Sources
 
