@@ -78,7 +78,8 @@ The UK sources (Prospects and the National Careers Service) set the conventions.
 4. **Projects:** Blender Asset Remap and the Dymaxion projector, each title linked to its code. The website is under Kyberfex.
 5. **Skills:** languages, frameworks and services, databases, and how Ash works. Only what the experience above backs up.
 6. **Education and training:** the CODE Cumbria Skills Bootcamp, the HNC, and school in one entry.
-7. **Interests,** one line, then "References are available on request."
+7. **Interests,** one line.
+8. **References,** under a heading of their own so they don't read as an interest: "Available on request."
 
 ## Format and build
 

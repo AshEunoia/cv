@@ -55,12 +55,12 @@ A command-line tool that moves and renames files in a Blender project and repair
 
 Perl · made in 2015, published in 2025
 
-Projects global elevation data and shorelines onto Buckminster Fuller's Dymaxion map, at up to 43,200 × 21,600 pixels, for use in animation.
+Maps the world's elevation and shorelines onto Buckminster Fuller's Dymaxion map.
 
 ## Skills
 
-- **Languages:** Python, TypeScript, JavaScript, HTML, CSS and SQL; earlier, PHP, Perl and VBA.
-- **Frameworks and services:** Django, Wagtail, Astro, Sanity, Square's APIs, and Blender and its Python API.
+- **Languages:** Python, TypeScript, JavaScript, HTML, CSS, SQL; earlier, PHP, Perl, VBA.
+- **Frameworks:** Django, Wagtail, Astro, Sanity, Square's APIs, and Blender's Python API.
 - **Databases:** PostgreSQL, SQLite and MySQL.
 - **How I work:** Claude Code; pytest and Playwright; Git, GitHub, pull requests and continuous integration; WCAG 2.2 AA; plain-English guides.
 
@@ -68,9 +68,9 @@ Projects global elevation data and shorelines onto Buckminster Fuller's Dymaxion
 
 ### CODE Cumbria Skills Bootcamp
 
-Whitehaven and online · Sep 2025 – Dec 2025
+Whitehaven and online · Sep 2025 – Dec 2025 · certificate of achievement
 
-An 11-week course, with a certificate of achievement, for tech roles in the nuclear, energy and engineering sectors: Python, SQL, data science, machine learning, cyber security, networking, PLC programming, microcontrollers and safety-critical systems.
+An 11-week course for tech roles in nuclear, energy and engineering: Python, SQL, data science, machine learning, cyber security, networking, PLCs and microcontrollers.
 
 ### HNC in Multimedia and Website Development
 
@@ -88,4 +88,6 @@ A levels in Geography, Economics and Biology; GCSEs including Maths (A).
 
 Blender animation, photography, painting, hiking, and motorcycling in the Lake District.
 
-References are available on request.
+## References
+
+Available on request.
